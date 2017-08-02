@@ -1,0 +1,57 @@
+.total-container {
+    background: grey;
+    width:80%;
+    justify-content: center;
+    // text-align: center;
+    // color:white;
+
+    }
+
+.top-banner {
+    background:yellowgreen;
+    // color:white;
+
+    .title {
+        background: purple;
+        width:50%;
+        // color:white;
+
+        .subtitle {
+            background:teal;
+            // color:white;
+
+        }
+    }
+}
+
+
+
+
+
+.main-container {
+
+    .top-menu {
+        // width:50%;
+        
+        ul {
+            background:yellow;
+            // color:white;
+        }
+        li {
+            background:pink;
+            // color:white;
+        }
+}
+
+    .sort-container {
+        ul {
+            background:red;
+            // color:white;
+        }
+        li {
+            background:orange;
+            // color:white;
+            }
+    }
+}
+

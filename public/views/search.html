@@ -1,0 +1,61 @@
+<nav-bar></nav-bar>
+
+<div class='searchPageWrapper'>
+	<div class='searchLeftWrapper'>
+
+		<div class='searchleftTitles'>Show results for</div>
+		<form>
+			<input type="radio" name="chooseone" value="HTML">
+			<label class='searchLeftList' for="Videos"> Videos</label>
+			<br>
+			<input type="radio" name="chooseone" value="CSS">
+			<label class='searchLeftList' for="On Demand"> On Demand</label>
+			<br>
+			<input type="radio" name="chooseone" value="JS">
+			<label class='searchLeftList' for="People"> People</label>
+			<br>
+			<input type="radio" name="chooseone" value="PHP">
+			<label class='searchLeftList' for="Channels"> Channels</label>
+			<br>
+			<input type="radio" name="chooseone" value="Ruby">
+			<label class='searchLeftList' for="Groups"> Groups</label>
+		</form>
+		<div class='searchBorder'></div>
+
+	</div>
+
+
+	<div class='searchRightWrapper'>
+		<div class="searchVideos" ng-repeat="stuff in videos" ng-click="playVideo(stuff.embed.html, stuff.uri, $index)">
+
+			<!-- <div ng-repeat='number in convertNum(stuff.stats.plays)'> -->
+
+			<img class='searchImage' ng-src='{{stuff.pictures.sizes[3].link}}'>
+			<div class='vidName'>{{stuff.name}}</div>
+			<div class='userAndViewsWrapper'>
+				<span>{{stuff.user.name}}</span>
+
+				<!-- <span class='searchPlays' ng-show='stuff.stats.plays=1' +'plays'></span> -->
+				<span class='searchPlays' ng-hide='stuff.stats.plays==null'>{{stuff.stats.plays | number:fraction}} plays</span>
+
+
+			</div>
+		</div>
+
+		<div class='searchButtonWrapper'>
+			<button ng-click="page(1)">1</button>
+			<button ng-click="page(2)">2</button>
+			<button ng-click="page(3)">3</button>
+			<button ng-click="page(4)">4</button>
+			<button ng-click="page(5)">5</button>
+			<button ng-click="page(6)">6</button>
+			<button ng-click="page(7)">7</button>
+			<button ng-click="page(8)">8</button>
+			<button ng-click="page(9)">9</button>
+			<button ng-click="page(10)">10</button>
+		</div>
+
+	</div>
+</div>
+
+<footer-dir></footer-dir>

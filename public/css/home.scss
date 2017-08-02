@@ -1,0 +1,249 @@
+.mainPageWhiteBackground{
+  background-color:white;
+  padding-bottom:50px;
+}
+
+.fade{
+  // background-color:black;
+
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(50,50,50,0.8)),
+    to(rgba(80,80,80,0.2)), color-stop(.5,#333333)
+  );
+
+  // opacity:.5;
+  height:400px;
+  width:45%;
+  position: absolute;
+}
+
+#topBannerWrapper{
+height: 400px;
+width: 100%;
+display:flex;
+align-items: flex-end;
+justify-content: center;
+align-items: center
+}
+
+.mainBlackBackground{
+  background-color: black;
+  height:100%;
+  width:100%;
+  z-index:-2;
+}
+
+.gradient{
+ background: linear-gradient(to right, black, rgba(255,0,0,0));
+ position: absolute;
+ height:400px;
+ width:100%;
+ z-index:-1;
+ left:0;
+}
+
+.topBanner{
+  width:96%;
+  z-index:-1;
+  position: absolute;
+  right:0;
+  padding-left:55px;
+}
+
+.mainPageChannelsWrapper{
+  max-width: 1720px;
+  height:auto;
+  font-size: 16px;
+  color: #1a2e3b;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mainPageChannels{
+  width:100%;
+  margin-left:2.8125rem;
+  margin-right:2.8125rem;
+}
+
+.mainPageChannelInfo{
+  width: 16.6666666667%;
+  height:auto;
+  background-color:white;
+  border: 1px solid #D0D8DB;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  margin-left:10px;
+  margin-right:10px;
+
+  float:left;
+}
+
+.mainPageTopBlack{
+  width: 100%;
+  position:relative;
+  height: 0;
+  padding-bottom: 56.23%;
+  background-color: #000;
+  // border-top-left-radius: 5px;
+  // border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainPageBottomWhite{
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+width:100%;
+}
+
+.mainPageChannelName{
+  color: #3A5161;
+  font-weight: 700;
+  line-height:1.189;
+  font-size:1.9rem;
+}
+
+.mainPageChannelPic{
+display:flex;
+justify-content: center;
+}
+
+.testImage{
+  height:16.5rem;
+  border-radius:50%;
+  position: relative;
+  top:-11.75rem;
+
+  border-radius: 50%;
+}
+
+.mainPageChannelDescription{
+
+}
+
+.mainPageDescriptionWrapper{
+  padding:10px;
+  top:-116px;
+  position: relative;
+
+  margin-bottom:-48%;
+}
+
+.mainPageChannelFollow{
+width:100%;
+color: #fff;
+border-color: #00adef;
+background-color: #00adef;
+min-width: 4.25rem;
+min-height: 1.875rem;
+padding: 0 .625rem;
+line-height: 2.14286;
+font-size:1.4rem;
+text-align: center;
+position: relative;
+
+margin-top:50%;
+margin-bottom:20px;
+}
+
+.mainPageVideosWrapper{
+  width:81%;
+  height:100%;
+  float:right;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.mainPageVideos{
+width:20%;
+}
+
+// .placeholderVideoWrapper{
+//   max-height:120px;
+// }
+
+.placeholderVideo{
+  width:100%;
+  margin-top:20px;
+  // margin-right: 10px;
+  // margin-left: 10px;
+  padding-left:10px;
+  padding-right:10px;
+  height: 120px;
+}
+
+.vidNameMainPage{
+  margin-top:10px;
+  color: #3A5161;
+  font-weight: 700;
+  max-width: 320px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left:10px;
+  padding-right:10px;
+  width:100%;
+}
+
+.userAndViewsWrapperMainPage{
+  width:100%;
+  color: #879CAB;
+  cursor:pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size:12px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.searchPlaysMainPage{
+  border-left: solid 1px #D0D8DB;
+  margin-left:3px;
+  padding-left: 6px;
+}
+
+.bannerDescriptWrapper{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  height: 400px;
+  padding-left:55px;
+  z-index:5;
+}
+
+.bannerTitleMainPage{
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: -.015em;
+  margin-bottom:.5rem;
+  font-weight:700;
+}
+
+.bannerUserMainPage{
+  color:#fff;
+  font-size:12px;
+}
+
+.bannerUserMainPage img{
+  border-radius:50px;
+  height:16px;
+  width:16px;
+  position: relative;
+  top:-1px;
+  margin-right:3px;
+}
+
+.bannerDescriptMainPage{
+  color:rgba(255,255,255,.75);
+  font-size: 14px;
+  line-height: 1.3;
+  width: 35%;
+  margin-top:10px;
+}
+
+

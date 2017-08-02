@@ -1,0 +1,51 @@
+.settings-container{
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+
+    flex-wrap: wrap;
+}
+.settings-page{
+    position: relative;
+    max-width: 69.375rem;
+    min-width: 60rem;
+    padding-top: 3.125rem;
+    width: auto;
+    width: 960px;
+    padding: 20px 0 0;
+    margin-left: 336px;
+    margin-top: 33px;
+}
+.settings-wrap {
+display: flex;
+    width: 100%;
+flex-flow: row nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.settings-railContainer{
+margin-right: 70px;
+
+    min-width: 330px;
+}
+.left-box {
+    width: 330px;
+    display: flex;
+ height: 20vh;
+background-color: blue;
+    margin-right: 30px;
+}
+
+.basics{ h1{} h4{} .tip{} .text-box{} }
+
+
+.description{ .tip{} .text-box{} }
+
+
+.language{ .tip{} }
+
+.language-dropdown{}
+
+
+
+

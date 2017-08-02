@@ -1,0 +1,81 @@
+.uploadTopWrapper{
+  height: 54px;
+  margin: 30px 30px 10px;
+}
+
+.searchLowerWrapper{
+padding-left: 30px;
+}
+
+.uploadTitle{
+  font-weight: 700;
+  font-size: 37px;
+}
+
+.searchRulesWrapper{
+  margin: 5px 10px 5px 10px;
+  border: 1px solid #E3E8E9;
+  border-radius: 5px;
+  width:298px;
+}
+
+.searchLeft{
+  float:left;
+}
+
+.searchRulesSub{
+  padding:15px 15px 15px 0px;
+}
+
+.searchRulesTitle{
+  width: 298px;
+  height: 30.594px;
+  border-bottom: 1px solid #E3E8E9;
+  padding: 5px 10px 5px 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.searchUnderList{
+  padding-left:24px;
+}
+
+.searchRight{
+  margin-right:30px;
+  border: 1px dashed #D0D8D8;
+  margin-left:330px;
+  padding:60px;
+}
+
+.searchRightTopWrapper{
+  height: 212px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cloudSymbol{
+  height:105px;
+}
+
+.uploadButtonWrapper{
+  display:flex;
+}
+
+.uploadPageButton{
+  height:37px;
+  background-color: #00ADEF;
+  color: #FFF;
+  font-weight: 700;
+  border-radius: .1875rem;
+  text-align: center;
+  letter-spacing: .5px;
+  line-height: 2.7142857143;
+  padding: 0 16px;
+}
+
+.underUploadButton{
+  margin-top:10px;
+  font-size: 14.5px;
+}

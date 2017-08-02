@@ -1,0 +1,133 @@
+.colorRibbon{
+  width:100%;
+  background-image: -webkit-linear-gradient(left,#73D2F6,#08C 22%,#7FC400 36%,#FFD583 48%,#FFB21E 63%,#FF4D4D 76%,#503873);
+  height:0.2875rem;
+}
+
+.navBarWrapper{
+  height: 60px;
+  width: 100%;
+  background-color: #EEF1F2;
+  border-bottom: 1px solid #D0D8DB;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: #607680;
+}
+
+.navBarInnards{
+  height:100%;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  min-width: 960px;
+}
+
+.navBarInnards div{
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.vimeoLogo{
+  width:100px;
+  margin-bottom: 10px;
+}
+
+.arrows{
+  position: relative;
+  margin-top:1px;
+}
+
+.searchBar{
+  margin: 0 5px 0 0;
+  width: 272px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0 32px 0 10px;
+  color: #7b8084;
+  position: absolute;
+  right: 179px;
+  top:15px;
+}
+
+.magGlass{
+  width: 14px;
+  position: absolute;
+  right: 197px;
+  top: 23px;
+}
+
+.profilePic{
+  height: 32px;
+  width: 32px;
+  background:gray;
+  border-radius: 100%;
+  position: absolute;
+  right: 134px;
+  cursor:pointer;
+}
+
+.cloud{
+  margin-right: 6px;
+}
+
+.uploadButton{
+  background-color: #657987;
+  line-height: 32px;
+  border-radius: .1875rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  position: absolute;
+  right: 30px;
+}
+
+a:hover, a:visited, a:link, a:active .logInNav{
+  text-decoration:none;
+  color:#607680;
+}
+
+.dropDown{
+  position:absolute;
+  height:345px;
+  width:203px;
+  background-color:white;
+  top:62px;
+  right:55px;
+  border: 1px solid #D0D8DB;
+  color:black;
+  font-weight:400;
+  display: flex;
+  flex-direction: column;
+  padding-top:15px;
+}
+
+.dropDown div{
+  padding-top:2px;
+  padding-bottom:2px;
+  padding-left:2px;
+  font-size: 15px;
+}
+
+.dropDown div a{
+  color:black;
+}
+
+.navUserName{
+  font-weight:700;
+  margin-top:-5px;
+}
+
+.mainUserArrow{
+  font-size:8.75px;
+}
+
+.navViewProf{
+  font-size:10.75px !important;
+}
+
+.mainBorderDropdown{
+  border-bottom: 1px solid #D0D8DB;
+  margin-left:-20px;
+  margin-bottom:6px;
+}

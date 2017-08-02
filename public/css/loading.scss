@@ -1,0 +1,28 @@
+.loadingWrapper{
+  width:100%;
+  height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading{
+  color:#607680;
+  font-size:28px;
+  font-weight:700;
+}
+
+.loadBlue{
+  color:blue;
+  font-size:50px;
+}
+
+.loadGreen{
+  color:green;
+  font-size:50px;
+}
+
+.loadRed{
+  color:red;
+  font-size:50px;
+}

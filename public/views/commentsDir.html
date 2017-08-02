@@ -1,0 +1,30 @@
+<div class="comments-outer-wrapper">
+	<div class="comments-wrapper">
+		<div class="comments-title">{{media.metadata.connections.comments.total}} Comments</div>
+		<div class="previous-comments-bar">
+			+ Load 100 previous comments
+		</div>
+		<div class="comment-content" ng-repeat="data in comments track by $index">
+			<img ng-if="data.user.pictures.sizes[3].link" ng-src="{{data.user.pictures.sizes[3].link}}"
+			     class="user-pic">
+			<img ng-if="!data.user.pictures.sizes[3].link" src="./images/default-user-img.png" class="user-pic">
+
+			<div class="main-comment-box">
+				<div class="comment-details">
+					<div class="user-name">{{data.user.name}}</div>
+					<div class="post-date">{{data.created_on | date : "MMM d, y"}}</div>
+				</div>
+				<div class="user-comment">
+					{{data.text}}
+				</div>
+				<a class="reply-tag">Reply</a>
+
+			</div>
+		</div>
+		<div class="comment-box-container">
+			<input class="comment-box" type="text" ng-model="text" name="comment-input"
+			       placeholder="Add a comment">
+			<button class="comment-submit" ng-click="addComment()">Add comment</button>
+		</div>
+	</div>
+</div>
