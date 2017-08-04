@@ -48,9 +48,9 @@ gulp.task('build', ['views', 'build-css', 'build-js', 'images'], () => {
         .pipe(gulp.dest('dist'));
 });
 
-// gulp.task('watch', () => {
-//     return gulp.watch(['./public/index.html', './public/css/**/*', './public/js/**/*', './public/views/**/*'], ['build']);
-// });
+gulp.task('watch', () => {
+    return gulp.watch(['./public/index.html', './public/css/**/*', './public/js/**/*', './public/views/**/*'], ['build']);
+});
 
 gulp.task('default' , ['build']);
 
