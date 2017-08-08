@@ -5,7 +5,7 @@ const express = module.exports = require('express'),
     mainCtrl = require('./mainCtrl'),
     fileArr = require('./fileArr');
 
-require('./middleware/session')(app);
+require('./middleware')(app);
 require('./routes/get')(app);
 require('./routes/post')(app);
 

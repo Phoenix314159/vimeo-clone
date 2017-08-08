@@ -1,5 +1,5 @@
 const session = require('express-session'),
-    config = require('../config'),
+    config = require('./config'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
     corsOptions = {
