@@ -7,7 +7,7 @@ require('./middleware')(app);
 require('./routes/get')(app);
 require('./routes/post')(app);
 
-fileArr.arr.map(file => {
+fileArr.files.map(file => {
     app.use(express.static(__dirname + file));
 })
 
