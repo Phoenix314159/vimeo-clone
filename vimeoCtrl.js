@@ -121,8 +121,7 @@ module.exports = {
                 link: req.body.video
             }
         }).then(resp => {
-            res.status(201).send('hi');
-            console.log(resp);
+            res.status(201).send('some text');
         })
     }
 }

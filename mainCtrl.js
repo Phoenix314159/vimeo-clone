@@ -24,7 +24,6 @@ module.exports = {
         res.send(url);
     },
     callback: (req, res) => {
-        console.log('yo man');
         axios({
             method: 'post',
             url: 'https://api.vimeo.com/oauth/access_token',
@@ -87,9 +86,7 @@ module.exports = {
                 link: req.body.video
             }
         }).then(resp => {
-            console.log(resp);
         });
-
     },
     usersVideos: (req, response) => {
         axios({
@@ -112,7 +109,7 @@ module.exports = {
                 scope: scopes
             }
         }).then(resp => {
-            res.status(201).send('hi');
+            res.status(201).send('info');
         }).catch(error => {
             console.log('ERROR', error);
         });

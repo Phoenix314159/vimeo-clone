@@ -1,11 +1,20 @@
 const session = require('express-session'),
-    app = require('../server'),
-    config = require('../config');
+    config = require('../config'),
+    cors = require('cors'),
+    bodyParser = require('body-parser'),
+    corsOptions = {
+        origin: config.redirect_URL
+    };
 
-app.use(session({
-    secret: config.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-    rolling: true
-}));
+module.exports = app => {
+    app.use(bodyParser.json());
+    app.use(cors(corsOptions));
+    app.use(session({
+        secret: config.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: true,
+        rolling: true
+    }));
+}
+
 
