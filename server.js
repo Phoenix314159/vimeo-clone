@@ -17,7 +17,7 @@ process.env.PWD = process.cwd();
 app.use('/', express.static(process.env.PWD + '/dist'));
 
 fileArr.arr.filter(a => {
-    if(a !== '/dist'){
+    if(a !== fileArr.arr[0]){
         return true;
     }
 }).map(file => {
