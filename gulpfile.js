@@ -7,11 +7,6 @@ const gulp = require('gulp'),
     }),
     cachebust = new $.cachebust();
 
-gulp.task('index', () => {
-    return gulp.src('./public/index.html')
-        .pipe($.htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('./dist'));
-});
 
 gulp.task('views', () => {
     return gulp.src('./public/views/**/*')
@@ -47,8 +42,8 @@ gulp.task('images', () => {
         .pipe(gulp.dest('./dist/images'));
 });
 
-gulp.task('build', ['index', 'views', 'build-css', 'build-js', 'images'], () => {
-    return gulp.src('./public')
+gulp.task('build', ['views', 'build-css', 'build-js', 'images'], () => {
+    return gulp.src('./public/index.html')
         .pipe(cachebust.references())
         .pipe(gulp.dest('dist'));
 });
