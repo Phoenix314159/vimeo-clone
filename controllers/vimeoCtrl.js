@@ -1,6 +1,6 @@
-const vimeo_module = require('./lib/vimeo'),
+const vimeo_module = require('../lib/vimeo'),
     Vimeo = vimeo_module.Vimeo,
-    config = require('./config'),
+    config = require('../config/config'),
     axios = require('axios'),
     lib = new Vimeo(config.CLIENT_ID, config.CLIENT_SECRET, config.access_token),
     redirect_url = config.redirect_URL;
@@ -18,6 +18,7 @@ module.exports = {
                     direction: 'asc'
                 },
             }, (error, body) => {
+                console.log('body: ', body)
                 return !error ? res.status(200).send(body) : console.log(error);
             })
         }

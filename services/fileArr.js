@@ -1,5 +1,5 @@
 module.exports = {
-    files: ['/dist',
+    arr: ['/dist',
         '/node_modules/angular',
         '/node_modules/angular-ui-router/release',
         '/node_modules/moment/min',

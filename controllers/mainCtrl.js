@@ -1,7 +1,7 @@
 "use strict";
-const vimeo_module = require('./lib/vimeo'),
-    app = require('./server'),
-    config = require('./config'),
+const vimeo_module = require('../lib/vimeo'),
+    app = require('../server'),
+    config = require('../config/config'),
     massive = require('massive'),
     connString = config.MASSIVE_URI,
     massiveInstance = massive.connectSync({connectionString: connString}),

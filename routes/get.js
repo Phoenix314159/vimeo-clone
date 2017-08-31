@@ -1,5 +1,5 @@
-const mainCtrl = require('../mainCtrl'),
-    vimeoCtrl = require('../vimeoCtrl');
+const mainCtrl = require('../controllers/mainCtrl'),
+    vimeoCtrl = require('../controllers/vimeoCtrl');
 
 module.exports = app => {
     app.get('/api/videos', vimeoCtrl.getVideoById);
