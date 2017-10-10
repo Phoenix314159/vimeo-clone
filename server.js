@@ -9,7 +9,7 @@ require('./routes/post')(app);
 
 fileArr.files.map(file => {
     app.use(express.static(__dirname + file));
-})
+});
 
 //<--------- production ----------->
 // process.env.PWD = process.cwd();

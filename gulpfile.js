@@ -11,7 +11,7 @@ const gulp = require('gulp'),
 gulp.task('views', () => {
     return gulp.src('./public/views/**/*')
         .pipe($.htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('./dist/views'))
+        .pipe(gulp.dest('dist/views'))
 });
 
 gulp.task('build-css', () => {
@@ -22,7 +22,7 @@ gulp.task('build-css', () => {
         .pipe($.concat('styles.css'))
         .pipe($.sourcemaps.write('./maps'))
         .pipe($.cssmin())
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('build-js', () => {
@@ -34,17 +34,18 @@ gulp.task('build-js', () => {
         .pipe($.ngAnnotate())
         .pipe($.uglify())
         .pipe($.sourcemaps.write('./'))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('images', () => {
     return gulp.src('./public/images/**/*')
-        .pipe(gulp.dest('./dist/images'));
+        .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('build', ['views', 'build-css', 'build-js', 'images'], () => {
     return gulp.src('./public/index.html')
         .pipe(cachebust.references())
+        .pipe($.htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
 
