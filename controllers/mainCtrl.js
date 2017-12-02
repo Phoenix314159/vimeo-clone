@@ -74,18 +74,20 @@ module.exports = {
         });
     },
     uploadVideo: (req, res) => {
-        db.add_video([req.body.video], (err, result) => {
+        const {body: {video}, session: {access_token}} = req
+        db.add_video([video], (err, result) => {
             !err ? res.status(200).send(result) : res.status(404).send(err);
         })
         axios({
             method: 'post',
-            headers: {Authorization: `Bearer ${req.session.access_token}`},
+            headers: {Authorization: `Bearer ${access_token}`},
             url: 'https://api.vimeo.com/me/videos',
             data: {
                 type: 'pull',
-                link: req.body.video
+                link: video
             }
         }).then(resp => {
+            res.status(200).send('uploaded');
         });
     },
     usersVideos: (req, response) => {
