@@ -89,10 +89,11 @@ module.exports = {
         });
     },
     usersVideos: (req, response) => {
+        const {session: {access_token}} = req
         axios({
             method: 'get',
             url: 'https://api.vimeo.com/me/videos',
-            headers: {Authorization: `Bearer ${req.session.access_token}`}
+            headers: {Authorization: `Bearer ${access_token}`}
         }).then(res => {
             response.status(200).send(res.data);
         }).catch(error => {
@@ -100,12 +101,13 @@ module.exports = {
         });
     },
     addComments: (req, res) => {
+        const {body: {text}, params: {id}, session: {access_token}} = req
         axios({
             method: 'post',
-            url: `https://api.vimeo.com/videos/${req.params.id}/comments`,
-            headers: {Authorization: `Bearer ${req.session.access_token}`},
+            url: `https://api.vimeo.com/videos/${id}/comments`,
+            headers: {Authorization: `Bearer ${access_token}`},
             data: {
-                text: req.body.text,
+                text,
                 scope: scopes
             }
         }).then(resp => {
@@ -116,7 +118,8 @@ module.exports = {
 
     },
     watchLater: (req, res) => {
-        db.add_video([req.body.video, req.params.id], (err, video) => {
+        const {body: {video}, params: {id}} = req
+        db.add_video([video, id], (err, video) => {
             !err ? res.status(200).send(video) : res.status(404).send(err);
         })
     },
